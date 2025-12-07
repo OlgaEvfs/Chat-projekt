@@ -1,58 +1,65 @@
-Chat projekt
+# Chat Projekt
 
-Simple real-time chat application built with Express, Socket.io, and TypeScript, using an MVC architecture. Supports hot-reload development and public access via ngrok.
+Simple real-time chat application built with **Express**, **Socket.io**, and **TypeScript**, using an **MVC architecture**. Supports hot-reload development and public access via **ngrok**.
 
-⚙️ Requirements
+## ⚙️ Requirements
 
-Node.js v18+
+- Node.js v18+
+- npm
 
-npm or yarn
+## 📥 Installation & Setup
 
-📥 Installation & Setup
-1️⃣ Clone the repository
-git clone https://github.com/OlgaEvfs/Chat-projekt
-cd chatts
+1️⃣ **Clone the repository**  
+
+git clone https://github.com/OlgaEvfs/Chat-projekt.git
+cd Chat-projekt
 
 2️⃣ Install dependencies
+
 npm install
 
-🔐 Environment Variables
-
-Create a .env file in the project root:
-
-NGROK_TOKEN=your_ngrok_token
-
+## Environment Variables
+Create a .env file in the project root: NGROK_TOKEN=your_ngrok_token
 
 ⚠️ Important:
+
 Do NOT commit your .env file.
+
 Make sure .env is listed in .gitignore.
 
-🌍 Running a Public Tunnel (ngrok)
+## Running the Project
+Step 1: Start the server (development mode with hot reload)
 
-The project includes a script to start ngrok using the token from .env:
+npm run dev
+
+Step 2: Run a public tunnel with ngrok
 
 npm run tunnel
 
+Uses scripts/tunnel.js to create a public HTTPS URL.
 
-This uses:
+This allows access to your chat from other devices or to share with testers.
 
-scripts/tunnel.js
+Note: Always start npm run dev first, then npm run tunnel.
 
+## How to Use
+Open the provided ngrok URL in your browser.
 
-After launching, ngrok will provide a public HTTPS URL to access the chat from other devices or share with testers.
+Type a username and join the chat.
 
-▶️ Run Modes
-🔧 Development Mode (Hot Reload)
-npm run dev
+Start sending messages in real-time.
 
+Anyone with the URL can access the chat while your server is running.
 
-Runs the project with nodemon, which automatically restarts the server whenever .ts files change.
+## Technologies Used
+Node.js
 
-📦 Build TypeScript (Optional)
-npm run build
+Express
 
+Socket.io
 
-Compiles TypeScript files into the dist/ directory.
+TypeScript
 
-🚀 Run Compiled Version
-npm start
+ngrok
+
+MVC Architecture
