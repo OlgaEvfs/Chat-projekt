@@ -1,4 +1,23 @@
+# Зависимости
 node_modules/
+
+# Сборка
+dist/
+build/
+*.tsbuildinfo
+
+# Переменные окружения
 .env
+.env.*
+!.env.example
+
+# Логи
 *.log
+npm-debug.log*
+
+# Тесты
+coverage/
+
+# Системные файлы
 .DS_Store
+Thumbs.db
